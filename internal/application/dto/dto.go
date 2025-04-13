@@ -1,4 +1,4 @@
-package model
+package dto
 
 import (
 	"time"
@@ -7,25 +7,26 @@ import (
 	"github.com/shopspring/decimal"
 )
 
-type exercise struct {
+type Exercise struct {
 	id   uuid.UUID
 	name string
 	memo string
 }
 
-type record struct {
+type Record struct {
 	id        uuid.UUID
+	exercise  Exercise
 	memo      string
+	sets      []recordSet
 	createdAt time.Time
-
-	exercise exercise
-	sets     []set
+	updatedAt time.Time
 }
 
-type set struct {
+type recordSet struct {
 	id        uuid.UUID
 	recordID  uuid.UUID
 	weight    decimal.Decimal
 	reps      uint
 	createdAt time.Time
+	updatedAt time.Time
 }
