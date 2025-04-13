@@ -11,14 +11,14 @@ type ExerciseRepository interface {
 	Delete(uuid.UUID) error
 }
 
-type RecordRepository interface {
-	Create(aggregate.Record) error
-	Update(uuid.UUID, aggregate.Record) error
+type ExerciseRecordRepository interface {
+	Create(aggregate.ExerciseRecord) error
+	Update(uuid.UUID, aggregate.ExerciseRecord) error
 	Delete(uuid.UUID) error
 }
 
-type RecordSetRepository interface {
-	Create(aggregate.RecordSet) error
-	Update(aggregate.RecordSet) error
+type ExerciseSetRepository interface {
+	Create(aggregate.ExerciseSet) error
+	Update(aggregate.ExerciseSet) error
 	Delete(uuid.UUID) error
 }

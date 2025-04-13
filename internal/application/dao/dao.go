@@ -6,6 +6,6 @@ type ExerciseDao interface {
 	GetAll() ([]dto.Exercise, error)
 }
 
-type RecordDao interface {
-	GetAll() ([]dto.Record, error)
+type ExerciseRecordDao interface {
+	GetAll() ([]dto.ExerciseRecord, error)
 }

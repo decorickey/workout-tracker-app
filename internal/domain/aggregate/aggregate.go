@@ -10,13 +10,13 @@ type Exercise struct {
 	memo string
 }
 
-type Record struct {
+type ExerciseRecord struct {
 	exerciseID uuid.UUID
 	memo       string
 }
 
-type RecordSet struct {
-	recordID uuid.UUID
-	weight   decimal.Decimal
-	reps     uint
+type ExerciseSet struct {
+	exerciseRecordID uuid.UUID
+	weight           decimal.Decimal
+	reps             uint
 }
